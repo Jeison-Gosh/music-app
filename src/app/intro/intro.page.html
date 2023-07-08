@@ -1,0 +1,13 @@
+<ion-header> </ion-header>
+
+<ion-content>
+  <ion-icon name="close" class="close-icon" (click)="finish()"></ion-icon>
+  <swiper-container [initialSlide]="0" [slidesPerView]="1" [speed]="200">
+    <swiper-slide *ngFor="let slide of slides" effect="cube">
+      <h1 class="simple-h1">{{slide.title}}</h1>
+      <img src="{{slide.img}}" />
+      <ion-icon name="paw-outline"></ion-icon>
+      <p class="simple-p">{{slide.description}}</p>
+    </swiper-slide>
+  </swiper-container>
+</ion-content>

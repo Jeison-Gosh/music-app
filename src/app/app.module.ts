@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
+import { IonicStorageModule } from '@ionic/storage-angular';
+
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [AppComponent],

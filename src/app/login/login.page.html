@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar Sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+    <ion-item class="inputs">
+      <ion-input
+        label="Email"
+        labelPlacement="floating"
+        placeholder="name@example.com"
+        formControlName="email"
+      ></ion-input>
+    </ion-item>
+
+    <div class="validation-erros">
+      <ng-container *ngFor="let validation of validation_messages.email">
+        <div
+          *ngIf="(
+          loginForm.get('email')?.hasError(validation.type) && 
+          loginForm.get('email')?.dirty) 
+        "
+        >
+          {{validation.message}}
+        </div>
+      </ng-container>
+    </div>
+
+    <ion-item class="inputs">
+      <ion-input
+        label="Contraseña"
+        labelPlacement="floating"
+        placeholder="*******"
+        formControlName="password"
+        type="password"
+      ></ion-input>
+    </ion-item>
+    <div class="spanpad">
+      <span>
+        Si olvido su contraseña puede <br />
+        clickear aqui abajo para restablecerla. <br /><br />
+        <span (click)="forgotPass()" class="forgot">
+          Olvide mi contraseña
+        </span>
+      </span>
+    </div>
+    <div class="buttons">
+      <ion-button
+        expand="full"
+        shape="round"
+        color="success"
+        (click)="goToRegister()"
+      >
+        Registrate
+      </ion-button>
+      <ion-button
+        expand="full"
+        shape="round"
+        color="secondary"
+        [disabled]="!loginForm.valid"
+        type="submit"
+      >
+        Ingresar
+      </ion-button>
+    </div>
+  </form>
+  <ion-footer> </ion-footer>
+</ion-content>

@@ -3,9 +3,16 @@
 
 /** Ionic CSS Variables **/
 :root {
+
+  /** My Variables **/
+  --custom-span: #B9B9B9;
+  --custom-span-opaque: rgba(var(--custom-span),0.5);
+  --my-favorite-color: #9be4f3;
+  --my-favorite-font-size: 35px;
+
   /** primary **/
-  --ion-color-primary: #DE77F2;
-  --ion-color-primary-rgb: 222, 119, 242;
+  --ion-color-primary: #3880ff;
+  --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
   --ion-color-primary-shade: #3171e0;
@@ -83,7 +90,7 @@
    */
 
   body {
-    --ion-color-primary: #DE77F2;
+    --ion-color-primary: #428cff;
     --ion-color-primary-rgb: 66,140,255;
     --ion-color-primary-contrast: #ffffff;
     --ion-color-primary-contrast-rgb: 255,255,255;

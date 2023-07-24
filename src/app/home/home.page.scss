@@ -1,16 +1,10 @@
-h1 {
-  text-align: center;
-  color: var(--ion-color-simple-h1);
-  font-family: "Segoe Print";
-  font-weight: bold;
-  font-size: 75px;
-  text-shadow: -1px 5px 6px rgba(119, 191, 242, 0.7);
-  margin-top: 40%;
+ion-avatar {
+    height: 100px;
+    width: 100px;
 }
-
-.homeicon{
-    align-items: center;
-    text-align: center;
-    display: flex;
-    margin-top: 5%;
+swiper-slide {
+    height: 120px;
+}
+.album-style {
+    --border-radius: 4px;
 }

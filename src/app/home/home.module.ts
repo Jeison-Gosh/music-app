@@ -7,11 +7,8 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 
 
-
 @NgModule({
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
-  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
     CommonModule,
     FormsModule,

@@ -16,7 +16,7 @@
 @import "@ionic/angular/css/normalize.css";
 @import "@ionic/angular/css/structure.css";
 @import "@ionic/angular/css/typography.css";
-@import '@ionic/angular/css/display.css';
+@import "@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "@ionic/angular/css/padding.css";
@@ -24,3 +24,24 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+ion-title {
+  size: 90%;
+  color: #ffff;
+  font-family: "Segoe Print";
+  color: #ffffff;
+  background: #333333;
+  text-shadow: 0 -1px 2px #fff, 0 -1px 5px #ff0, 0 -5px 10px #ff8000;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: capitalize;
+  text-align: center;
+}
+ion-input {
+  font-family: "Segoe Script";
+}
+span {
+  color: var(--custom-span);
+}
+
+

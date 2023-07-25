@@ -1,13 +1,13 @@
-<ion-header>
+<ion-header collapse="fade">
   <ion-toolbar>
     <ion-buttons slot="end">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button color="togglebutton"></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-avatar (click)="takePhoto()" class="center-avatar">
+  <ion-avatar (click)="takePhoto()" class="center-avatar" color="togglebutton">
     <img [src]="userImage" *ngIf="!photo" />
     <img [src]="photo" *ngIf="photo" />
   </ion-avatar>

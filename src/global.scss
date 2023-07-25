@@ -25,6 +25,36 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+.ion-color-icons {
+  --ion-color-base: var(--ion-color-icons);
+  --ion-color-base-rgb: var(--ion-color-icons-rgb);
+  --ion-color-contrast: var(--ion-color-icons-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-icons-contrast-rgb);
+  --ion-color-shade: var(--ion-color-icons-shade);
+  --ion-color-tint: var(--ion-color-icons-tint);
+}
+
+.ion-color-togglebutton {
+  --ion-color-base: var(--ion-color-togglebutton);
+  --ion-color-base-rgb: var(--ion-color-togglebutton-rgb);
+  --ion-color-contrast: var(--ion-color-togglebutton-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-togglebutton-contrast-rgb);
+  --ion-color-shade: var(--ion-color-togglebutton-shade);
+  --ion-color-tint: var(--ion-color-togglebutton-tint);
+}
+ion-toolbar {
+  background: rgb(42, 40, 38);
+  background: linear-gradient(
+    180deg,
+    rgba(42, 40, 38, 1) 29%,
+    rgba(22, 21, 20, 1) 78%
+  );
+}
+ion-content {
+  --background: url("assets/images/bgpages.png") center / auto no-repeat;
+  background-color: #201e1e;
+  background-blend-mode: overlay;
+}
 ion-title {
   size: 90%;
   color: #ffff;
@@ -43,5 +73,3 @@ ion-input {
 span {
   color: var(--custom-span);
 }
-
-

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { IntroGuard } from './guards/intro.guard';
 import { LoginGuard } from './guards/login.guard';
+import {LogedUserGuard} from './guards/loged-user.guard';
 
 const routes: Routes = [
   {
@@ -15,11 +16,11 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule), canActivate: [LogedUserGuard]
   },
   {
     path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule), canActivate: [LogedUserGuard]
   },
   {
     path: 'menu',
@@ -27,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: 'songs-modal',
-    loadChildren: () => import('./songs-modal/songs-modal.module').then( m => m.SongsModalPageModule)
+    loadChildren: () => import('./songs-modal/songs-modal.module').then( m => m.SongsModalPageModule), canActivate: [LogedUserGuard]
   },
 
 

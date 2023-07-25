@@ -41,7 +41,7 @@
       <span>
         Si olvido su contraseña puede <br />
         clickear aqui abajo para restablecerla. <br /><br />
-        <span (click)="forgotPass()" class="forgot">
+        <span (click)="forgotPass()"  class="forgot">
           Olvide mi contraseña
         </span>
       </span>
@@ -61,10 +61,12 @@
         color="secondary"
         [disabled]="!loginForm.valid"
         type="submit"
+        (click)="presentAlert()"
       >
         Ingresar
       </ion-button>
     </div>
   </form>
+
   <ion-footer> </ion-footer>
 </ion-content>

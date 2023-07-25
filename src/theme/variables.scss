@@ -5,11 +5,28 @@
 :root {
 
   /** My Variables **/
+  --custom-items: rgba(246,255,133,1)
   --custom-span: #B9B9B9;
   --custom-span-opaque: rgba(var(--custom-span),0.5);
   --my-favorite-color: #9be4f3;
   --my-favorite-font-size: 35px;
 
+  /** icons **/
+  --ion-color-icons: #F6FF85;
+  --ion-color-icons-rgb: 246,255,133;
+  --ion-color-icons-contrast: #ffffff;
+  --ion-color-icons-contrast-rgb: 255, 255, 255;
+  --ion-color-icons-shade: #F6AC54;
+  --ion-color-icons-tint: #E2EE51;
+
+  /** toggle buttons **/
+  --ion-color-togglebutton: #FF773D;
+  --ion-color-togglebutton-rgb: 255,119,61;
+  --ion-color-togglebutton-contrast: #ffffff;
+  --ion-color-togglebutton-contrast-rgb: 255, 255, 255;
+  --ion-color-togglebutton-shade: #AB3908;
+  --ion-color-togglebutton-tint: #FF6727;
+  
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;

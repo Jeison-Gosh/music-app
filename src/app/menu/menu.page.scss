@@ -1,3 +1,28 @@
-ion-content{
-    --background: url(../../assets/images/defaultbg.jpeg)
-  }
+ion-content {
+  --background: url(../../assets/images/defaultbg.jpeg);
+}
+
+ion-button {
+  font-family: "Tempus Sans ITC";
+  background: none;
+  background-color: none;
+  color: none;
+}
+
+.item-bg {
+  --ion-item-background: #2a2826;
+  
+}
+
+span {
+  margin-left: 5%;
+  font-family: "Tempus Sans ITC";
+  color: #ffff;
+}
+.closeIcon {
+  background: none;
+}
+
+.exitButton {
+  color: var(--ion-color-danger);
+}

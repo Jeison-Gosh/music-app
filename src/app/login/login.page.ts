@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms'
 import { AuthenticateService } from '../services/authenticate.service';
 import { NavController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -18,13 +19,15 @@ export class LoginPage implements OnInit {
     ]
   }
   errorMessage: string = '';
-
+  alertButton = ["OK"]
   constructor(
-    private formBuilder: FormBuilder, 
+    private formBuilder: FormBuilder,
     private authService: AuthenticateService,
     private navCtrl: NavController,
+    private alertController: AlertController,
     private storage: Storage
-    ) {
+
+  ) {
     this.loginForm = this.formBuilder.group(
       {
         email: new FormControl(
@@ -33,7 +36,7 @@ export class LoginPage implements OnInit {
             [
               Validators.required,
               Validators.pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9_.+-]+.[a-zA-Z0-9.-]+$")
-          ]
+            ]
           )
         ),
         password: new FormControl(
@@ -47,12 +50,12 @@ export class LoginPage implements OnInit {
         )
       }
     )
-   }
+  }
 
   ngOnInit() {
   }
 
-  loginUser(credentials: any){
+  loginUser(credentials: any) {
     console.log(credentials);
     this.authService.loginUser(credentials).then(res => {
       this.errorMessage = "";
@@ -66,8 +69,28 @@ export class LoginPage implements OnInit {
   goToRegister() {
     this.navCtrl.navigateForward("/register")
   }
-  forgotPass(){
-    
+  forgotPass() {
+
+  }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Error',
+      subHeader: 'Atención',
+      message: '¡Credenciales Invalidas!',
+      buttons: ['OK'],
+    });
+
+    this.storage.get('isUserLoggedIn').then((isUser) => {
+      if (isUser === null || isUser === undefined) {
+        alert.present();
+      }
+    }
+    ).catch((error) => {
+      alert.present();
+      console.error(error.message);
+    })
+
   }
 
 }

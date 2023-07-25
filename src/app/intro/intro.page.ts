@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage-angular';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-intro',
@@ -14,29 +15,33 @@ export class IntroPage implements OnInit {
       title: "Gatitos",
       img: "https://www.zooplus.es/magazine/wp-content/uploads/2021/06/Lombrices-en-gatitos.jpg",
       icon: "beer-outline",
-      description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las" 
+      description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las"
     },
     {
       title: "Perritos",
       img: "assets/images/perritos.jpeg",
       icon: "barbell-outline",
-      description: "Hola soy la explicacion del slide, Hola soy la explicacion del slide" 
+      description: "Hola soy la explicacion del slide, Hola soy la explicacion del slide"
     },
     {
       title: "Hamsters",
       img: "https://t1.ea.ltmcdn.com/es/posts/5/8/8/cuidados_y_alimentacion_del_hamster_7885_600.jpg",
       icon: "beer-outline",
-      description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto" 
+      description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto"
     },
     {
       title: "Gatitos",
       img: "https://www.zooplus.es/magazine/wp-content/uploads/2021/06/Lombrices-en-gatitos.jpg",
       icon: "beer-outline",
-      description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las" 
+      description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las"
     }
   ]
 
-  constructor(private router: Router, private storage: Storage) { }
+  constructor(
+    private router: Router,
+    private storage: Storage,
+    private navCtrl: NavController
+    ) { }
 
   ngOnInit() {
   }
@@ -44,7 +49,7 @@ export class IntroPage implements OnInit {
   close() {
     console.log("estoy tratando de cerrar");
     this.storage.set("introShow", true);
-    this.router.navigateByUrl("/menu/home");
+    this.navCtrl.navigateRoot("/menu/home");
   }
 
 }

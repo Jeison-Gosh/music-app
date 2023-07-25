@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'intro',
-    loadChildren: () => import('./intro/intro.module').then( m => m.IntroPageModule)
+    loadChildren: () => import('./intro/intro.module').then( m => m.IntroPageModule), canActivate: [LoginGuard] 
   },
   {
     path: 'login',
@@ -28,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: 'songs-modal',
-    loadChildren: () => import('./songs-modal/songs-modal.module').then( m => m.SongsModalPageModule), canActivate: [LogedUserGuard]
+    loadChildren: () => import('./songs-modal/songs-modal.module').then( m => m.SongsModalPageModule), canActivate: [LoginGuard, LogedUserGuard]
   },
 
 

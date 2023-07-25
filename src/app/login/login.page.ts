@@ -59,7 +59,7 @@ export class LoginPage implements OnInit {
     console.log(credentials);
     this.authService.loginUser(credentials).then(res => {
       this.errorMessage = "";
-      this.navCtrl.navigateForward("/menu/home");
+      this.navCtrl.navigateRoot("/menu/home");
     }).catch(err => {
       this.errorMessage = err;
       console.log(this.errorMessage);
@@ -75,7 +75,7 @@ export class LoginPage implements OnInit {
 
   async presentAlert() {
     const alert = await this.alertController.create({
-      header: 'Error',
+      header: 'Acceso Denegado',
       subHeader: 'Atención',
       message: '¡Credenciales Invalidas!',
       buttons: ['OK'],

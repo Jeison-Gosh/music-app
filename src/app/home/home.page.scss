@@ -1,10 +1,15 @@
 ion-avatar {
-    height: 100px;
-    width: 100px;
+  height: 100px;
+  width: 100px;
 }
 swiper-slide {
-    height: 120px;
+  height: 120px;
 }
 .album-style {
-    --border-radius: 4px;
+  --border-radius: 4px;
+}
+
+span {
+  color: var(--ion-color-icons);
+  text-align: center;
 }

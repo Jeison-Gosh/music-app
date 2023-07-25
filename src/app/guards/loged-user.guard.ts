@@ -13,10 +13,9 @@ export class LogedUserGuard implements CanActivate {
   ) { }
   async canActivate() {
     const isUserLoggedIn = await this.storage.get("isUserLoggedIn");
-    console.log("isUserLoggedIn espace", isUserLoggedIn);
     if (isUserLoggedIn) {
       this.navCtrl.navigateForward("/menu/home");
-      console.log("no dejo pasar");
+      console.log("Ya esta logeado el usuario");
       return false;
     } else {
       return true;

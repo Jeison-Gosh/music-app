@@ -1,12 +1,36 @@
 span {
+  color: #ffffff;
   font-family: "Segoe UI";
 }
 
-h1{
-    font-family: "Segoe UI";
+.spanstats{
+  font-family: "Segoe Print";
+  color: #ffffff;
+  text-shadow: 0 -1px 2px #fff, 0 -1px 5px #ff0, 0 -5px 10px #ff8000;
+  text-shadow: 0 -5px 10px #ff8000, 0 -1px 5px #ff0, 0 -1px 2px #ff0;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+  border-radius: 2% solid #fff;
 }
 
-h2{
-    font-family: "Segoe UI";
+h1 {
+  font-family: "Segoe UI";
+}
 
+h2 {
+  font-family: "Segoe UI";
+}
+
+ion-title {
+  size: 90%;
+  color: #ffff;
+  font-family: "Segoe Print";
+  color: #ffffff;
+  background: #333333;
+  text-shadow: 0 -1px 2px #fff, 0 -1px 5px #ff0, 0 -5px 10px #ff8000;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: capitalize;
+  text-align: center;
 }

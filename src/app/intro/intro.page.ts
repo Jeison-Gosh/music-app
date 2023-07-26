@@ -12,28 +12,24 @@ export class IntroPage implements OnInit {
 
   slides = [
     {
-      title: "Gatitos",
-      img: "https://www.zooplus.es/magazine/wp-content/uploads/2021/06/Lombrices-en-gatitos.jpg",
-      icon: "beer-outline",
-      description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las"
+      title: "Introductión",
+      img: "assets/images/intro1.png",
+      description: "Es una aplicación para esuchcar música y albunes de artistas famosos, así como mixs de exitos mundiales."
     },
     {
-      title: "Perritos",
-      img: "assets/images/perritos.jpeg",
-      icon: "barbell-outline",
-      description: "Hola soy la explicacion del slide, Hola soy la explicacion del slide"
+      title: "",
+      img: "assets/images/intro2.png",
+      description: "También puedes escuchar cover de musica clasica o karaoke, en Music App no hay limites para los gustos."
     },
     {
-      title: "Hamsters",
-      img: "https://t1.ea.ltmcdn.com/es/posts/5/8/8/cuidados_y_alimentacion_del_hamster_7885_600.jpg",
-      icon: "beer-outline",
-      description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto"
+      title: "Artistas",
+      img: "assets/images/intro3.jpg",
+      description: "Tienes el privilegio de escuchar a los mejores Artistas a nivel Mundial, junto con sus mas grandes Exitos indistintamente de su epoca."
     },
     {
-      title: "Gatitos",
-      img: "https://www.zooplus.es/magazine/wp-content/uploads/2021/06/Lombrices-en-gatitos.jpg",
-      icon: "beer-outline",
-      description: "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las"
+      title: "Electronica",
+      img: "assets/images/intro4.png",
+      description: "En la calle o en la Casa, es tu desición llevate la experiencia musical a otro nivel, disfruta todo el contenido de nuestros mixs y la música electrónica de los más grandes DJ. "
     }
   ]
 

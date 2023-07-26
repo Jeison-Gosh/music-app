@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { AuthenticateService } from '../services/authenticate.service';
 import { NavController } from '@ionic/angular';
+import { HttpBackend, HttpClient, HttpHeaders } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-register',
@@ -66,7 +68,8 @@ export class RegisterPage implements OnInit {
 
   registerUser(userData:any){
     console.log(userData);
-    this.authService.registerUser(userData).then(() => {
+    this.authService.registerUser(userData).subscribe((res) => {
+      console.log(res);
       this.navCtrl.navigateBack("/login");
     })
   }

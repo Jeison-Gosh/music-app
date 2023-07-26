@@ -11,6 +11,7 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+
   loginForm: FormGroup;
   validation_messages = {
     email: [
@@ -25,7 +26,7 @@ export class LoginPage implements OnInit {
     private authService: AuthenticateService,
     private navCtrl: NavController,
     private alertController: AlertController,
-    private storage: Storage
+    private storage: Storage,
 
   ) {
     this.loginForm = this.formBuilder.group(
@@ -57,11 +58,14 @@ export class LoginPage implements OnInit {
 
   loginUser(credentials: any) {
     console.log(credentials);
-    this.authService.loginUser(credentials).then(res => {
+    this.authService.loginUser(credentials).then((res: any) => {
       this.errorMessage = "";
+      this.storage.set("user_id", res.id);
+      this.storage.set("isUserLoggedIn", true);
       this.navCtrl.navigateRoot("/menu/home");
     }).catch(err => {
       this.errorMessage = err;
+      this.presentAlert();
       console.log(this.errorMessage);
     })
   }

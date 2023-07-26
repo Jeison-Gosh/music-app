@@ -11,8 +11,8 @@
     <img [src]="userImage" *ngIf="!photo" />
     <img [src]="photo" *ngIf="photo" />
   </ion-avatar>
-  <h1 class="ion-text-center">Jeison Gomez</h1>
-  <h2 class="ion-text-center">jeison@pca.edu.co</h2>
+  <h1 class="ion-text-center">{{userInfo?.name}} {{userInfo?.last_name}}</h1>
+  <h2 class="ion-text-center">{{userInfo?.email}}</h2>
   <ion-grid>
     <ion-row class="align-items-center ion-text-center row-header">
       <ion-col><span>100</span></ion-col>
@@ -20,9 +20,9 @@
       <ion-col><span>123</span></ion-col>
     </ion-row>
     <ion-row class="align-items-center ion-text-center">
-      <ion-col><span>Artistas</span></ion-col>
-      <ion-col><span>Seguidores</span></ion-col>
-      <ion-col><span>Canciones</span></ion-col>
+      <ion-col><span class="spanstats">Artistas</span></ion-col>
+      <ion-col><span class="spanstats">Seguidores</span></ion-col>
+      <ion-col><span class="spanstats">Canciones</span></ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

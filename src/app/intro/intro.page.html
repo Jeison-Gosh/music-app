@@ -1,9 +1,9 @@
 <ion-header>
   <ion-icon
-    name="close"
-    class="close-icon"
-    (click)="close()"
+    name="exit-outline"
     color="togglebutton"
+    class="header-button"
+    (click)="close()"
   ></ion-icon>
 </ion-header>
 
@@ -11,7 +11,7 @@
   <swiper-container [initialSlide]="0" [slidesPerView]="1" [speed]="400">
     <swiper-slide *ngFor="let slide of slides">
       <h1 class="introHeader">{{slide.title}}</h1>
-      <img src="{{slide.img}}" />
+      <img class="{{slide.class}}" src="{{slide.img}}" />
       <p>{{slide.description}}</p>
     </swiper-slide>
   </swiper-container>

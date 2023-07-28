@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage-angular';
 import { NavController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-intro',
   templateUrl: './intro.page.html',
@@ -30,6 +31,10 @@ export class IntroPage implements OnInit {
       title: "Electronica",
       img: "assets/images/intro4.png",
       description: "En la calle o en la Casa, es tu desición llevate la experiencia musical a otro nivel, disfruta todo el contenido de nuestros mixs y la música electrónica de los más grandes DJ. "
+    },
+    {
+      img: "assets/images/intro5.png",
+      class: "last-slide"
     }
   ]
 

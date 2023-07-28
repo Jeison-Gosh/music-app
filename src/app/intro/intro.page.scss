@@ -2,10 +2,16 @@ ion-content{
   --background: #402F25;
 }
 
-.close-icon{
-  width: 30px;
-  height: 30px;
+.header-button{
+  width: 40px;;
+  height: 40px;
 }
+
+.last-slide{
+  margin-top: 50%;
+  width: auto;
+}
+
 .introHeader {
   font-family: 'Segoe UI Semibold';
   color: var(--ion-color-icons);
